@@ -27,7 +27,7 @@ This Application is purely client side.
 * open index.html in a browser
 
 ### Test
-* npm run Test
+* npm run test
 
 ### Coverage
 * npm run coverage
