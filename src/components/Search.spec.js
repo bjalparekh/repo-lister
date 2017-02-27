@@ -3,7 +3,7 @@ import '../../init';
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import { expect } from 'chai';
-import sinon, {mock} from 'sinon';
+import sinon from 'sinon';
 
 import * as fetcher from '../middleware';
 import Search from './Search';
@@ -11,7 +11,8 @@ import Search from './Search';
 describe('Search component', () => {
   it('should call searchClickHandler on button click', () => {
     const cb = sinon.stub(fetcher, 'fetchRepoInfoForUser').returns(Promise.resolve({}));
-    const component = ReactTestUtils.renderIntoDocument(<Search onError={() => {}} onSuccess={() => {}} />);
+    const component = ReactTestUtils.renderIntoDocument(
+      <Search onError={() => {}} onSuccess={() => {}} />);
 
     const btn = component.refs.searchBtn;
     ReactTestUtils.Simulate.click(btn);

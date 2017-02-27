@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentWillUpdate(nextProps) {
-    if(this.props.list !== nextProps.list && nextProps.list.length === 0 && this.state.message === '') {
+    if (this.props.list !== nextProps.list && nextProps.list.length === 0 && this.state.message === '') {
       this.setState({
         message: 'Github user has no repos',
       });

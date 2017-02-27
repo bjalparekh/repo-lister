@@ -9,7 +9,6 @@
   },
   "scripts": {
     "lint": "eslint src/ test/ webpack.config.js index.js",
-    "lint:fix": "npm run lint -- --fix",
     "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
     "build": "webpack && npm run copy && webpack-dev-server --inline --hot --port 8090 --content-base dist/",
     "clean": "rm -rf ./dist",
@@ -17,7 +16,7 @@
     "coverage": "babel-node ./node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --require ./init.js --recursive './src/**/*.spec.js'"
   },
   "keywords": [
-    ""
+    "github"
   ],
   "author": "Bijal",
   "devDependencies": {
