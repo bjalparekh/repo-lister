@@ -30,9 +30,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Search onSuccess={this.onSuccess} onError={this.onError} />
-        <List list={this.props.list} />
-        <ErrorMessage message={this.state.message} />
+        <Search onSuccess={this.onSuccess} onError={this.onError} ref="search" />
+        <List list={this.props.list} ref="list" />
+        <ErrorMessage message={this.state.message} ref="message" />
       </div>
     );
   }
