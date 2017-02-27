@@ -24,4 +24,4 @@ This Application is purely client side.
 * git clone https://github.com/bjalparekh/repo-lister.git
 * npm install
 * npm run build
-* open http://locahost:8090 in a browser
+* open index.html in a browser
