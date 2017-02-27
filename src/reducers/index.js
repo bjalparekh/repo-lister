@@ -5,12 +5,10 @@ const initialState = {
 };
 
 const getRepoNameNList = (state, repoInfo) => {
-  const repoInfoList = repoInfo.map((item) => {
-    return {
-      name: item.name,
-      htmlUrl: item.html_url,
-    };
-  });
+  const repoInfoList = repoInfo.map((item) => ({
+    name: item.name,
+    htmlUrl: item.html_url,
+  }));
   return Object.assign({}, state, { list: repoInfoList });
 };
 
