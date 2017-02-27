@@ -1,0 +1,58 @@
+#root {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    height: 100vh;
+
+    .search-container {
+        input[type=text] {
+            height: 35px;
+            width: 300px;
+            outline: none;
+            font-size: 18px;
+            color: #555;
+        }
+
+        button {
+            background-color: #add8e6;
+            border-radius: 3px;
+            border: none;
+            margin-left: 10px;
+            padding: 14px 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            border-bottom: dashed 1px #555;
+            padding: 10px 0;
+        }
+
+        dl {
+            margin: 0;
+
+            dd {
+                display: inline-block;
+                color: #333;
+                margin: 0;
+            }
+
+            dt {
+                display: inline-block;
+                margin-left: 10px;
+                color: #555;
+            }
+        }
+    }
+
+    .errorMsg {
+        color: #DA3131;
+    }
+}

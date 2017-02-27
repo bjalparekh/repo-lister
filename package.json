@@ -1,0 +1,53 @@
+{
+  "name": "repo-lister",
+  "version": "1.0.0",
+  "description": "React 'repo lister' lists the github repo name and repo link of a given user",
+  "main": "./dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bjalparekh/repo-lister.git"
+  },
+  "scripts": {
+    "lint": "eslint src/ test/ webpack.config.js index.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
+    "build": "webpack && npm run copy",
+    "clean": "rm -rf ./dist",
+    "copy": "copy ./*.html ./dist",
+    "coverage": "babel-node ./node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --require ./init.js --recursive './src/**/*.spec.js'"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Bijal",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.7.4",
+    "babel-eslint": "^6.0.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "chai": "^3.5.0",
+    "copy": "^0.3.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.5.3",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-react": "^4.2.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "istanbul": "^1.0.0-alpha",
+    "jsdom-no-contextify": "^3.1.0",
+    "mocha": "^2.4.5",
+    "node-sass": "^3.4.2",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "sass-loader": "^3.2.0",
+    "sinon": "^1.17.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}
