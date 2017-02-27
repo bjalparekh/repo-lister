@@ -21,7 +21,9 @@ export default class Search extends Component {
     fetchRepoInfoForUser(this.refs.search.value).then((json) => {
       this.props.onSuccess(json);
     }).catch((status) => {
-      let errorMsg = status === 404 ? 'The Github "' + this.refs.search.value + '" user does not exist' : 'Github API does not respond';
+      const errorMsg = status === 404 ?
+      `The Github ${this.refs.search.value} user does not exist`
+      : 'Github API does not respond';
       this.props.onError(errorMsg);
     });
   }

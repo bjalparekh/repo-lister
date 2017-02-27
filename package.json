@@ -36,6 +36,7 @@
     "eslint-loader": "^1.3.0",
     "eslint-plugin-react": "^4.2.3",
     "extract-text-webpack-plugin": "^1.0.1",
+    "fetch-mock": "^5.9.4",
     "istanbul": "^1.0.0-alpha",
     "jsdom-no-contextify": "^3.1.0",
     "mocha": "^2.4.5",

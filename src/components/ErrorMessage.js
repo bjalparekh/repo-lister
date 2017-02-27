@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 
-export default class ErrorMessage extends Component {
+export default class ErrorMessage extends PureComponent {
   render() {
     return (
       <p className="errorMsg">

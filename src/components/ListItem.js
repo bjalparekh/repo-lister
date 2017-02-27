@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 
-export default class ListItem extends Component {
+export default class ListItem extends PureComponent {
   render() {
     return (<li>
       <dl>

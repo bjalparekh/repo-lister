@@ -17,6 +17,14 @@ class App extends Component {
     this.onError = this.onError.bind(this);
   }
 
+  componentWillUpdate(nextProps) {
+    if(this.props.list !== nextProps.list && nextProps.list.length === 0 && this.state.message === '') {
+      this.setState({
+        message: 'Github user has no repos',
+      });
+    }
+  }
+
   render() {
     return (
       <div>
