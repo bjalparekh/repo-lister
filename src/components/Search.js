@@ -20,13 +20,8 @@ export default class Search extends Component {
   searchClickHandler() {
     fetchRepoInfoForUser(this.refs.search.value).then((json) => {
       this.props.onSuccess(json);
-    }).catch((reject) => {
-      let errorMsg;
-      if(reject.message === 'Not Found') {
-        errorMsg = 'The Github "' + this.refs.search.value + '" user does not exist';
-      } else if(reject.typeError = 'Failed to fetch') {
-        errorMsg = 'Github API does not respond';
-      }
+    }).catch((status) => {
+      let errorMsg = status === 404 ? 'The Github "' + this.refs.search.value + '" user does not exist' : 'Github API does not respond';
       this.props.onError(errorMsg);
     });
   }

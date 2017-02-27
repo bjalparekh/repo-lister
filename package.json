@@ -11,7 +11,7 @@
     "lint": "eslint src/ test/ webpack.config.js index.js",
     "lint:fix": "npm run lint -- --fix",
     "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
-    "build": "webpack && npm run copy",
+    "build": "webpack && npm run copy && webpack-dev-server --inline --hot --port 8090 --content-base dist/",
     "clean": "rm -rf ./dist",
     "copy": "copy ./*.html ./dist",
     "coverage": "babel-node ./node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --require ./init.js --recursive './src/**/*.spec.js'"
@@ -48,6 +48,7 @@
     "sass-loader": "^3.2.0",
     "sinon": "^1.17.3",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
