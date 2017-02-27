@@ -25,3 +25,9 @@ This Application is purely client side.
 * npm install
 * npm run build
 * open index.html in a browser
+
+### Test
+* npm run Test
+
+### Coverage
+* npm run coverage
